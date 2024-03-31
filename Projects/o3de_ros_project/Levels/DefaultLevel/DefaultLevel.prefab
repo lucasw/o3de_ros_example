@@ -95,9 +95,6 @@
                     "$type": "ROS2FrameEditorComponent",
                     "Id": 11946284575773477305,
                     "ROS2FrameConfiguration": {
-                        "Namespace Configuration": {
-                            "Namespace": "lidar"
-                        },
                         "Frame Name": "lidar_frame"
                     }
                 },
@@ -130,16 +127,16 @@
                 "TransformComponent": {
                     "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
                     "Id": 2110613651702826715,
-                    "Parent Entity": "Entity_[1176639161715]",
+                    "Parent Entity": "Entity_[377009208255]",
                     "Transform Data": {
                         "Translate": [
-                            2.840056896209717,
-                            0.0,
-                            0.8391811847686768
+                            -0.4015653133392334,
+                            0.007787615060806274,
+                            0.2836482524871826
                         ],
                         "Rotate": [
                             0.0,
-                            -15.0,
+                            -15.000000953674316,
                             0.0
                         ]
                     }
@@ -311,7 +308,7 @@
         },
         "Entity_[1163754259827]": {
             "Id": "Entity_[1163754259827]",
-            "Name": "Camera",
+            "Name": "GameCamera",
             "Components": {
                 "Component_[11895140916889160460]": {
                     "$type": "EditorEntityIconComponent",
@@ -337,17 +334,17 @@
                 "Component_[18086214374043522055]": {
                     "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
                     "Id": 18086214374043522055,
-                    "Parent Entity": "Entity_[1176639161715]",
+                    "Parent Entity": "Entity_[377009208255]",
                     "Transform Data": {
                         "Translate": [
-                            -2.3000001907348633,
-                            -3.9368600845336914,
-                            1.0
+                            2.086728572845459,
+                            0.0,
+                            0.18150758743286133
                         ],
                         "Rotate": [
-                            -2.050307512283325,
-                            1.9552897214889526,
-                            -43.623355865478516
+                            0.0,
+                            0.0,
+                            90.0
                         ]
                     }
                 },
@@ -599,11 +596,9 @@
                         "Entity_[1180934129011]",
                         "Entity_[1172344194419]",
                         "Entity_[1168049227123]",
-                        "Entity_[1163754259827]",
                         "Entity_[1159459292531]",
-                        "Entity_[1101272022781]",
                         "Entity_[2136359141117]",
-                        "Entity_[2707589791485]"
+                        "Entity_[377009208255]"
                     ]
                 },
                 "Component_[9277695270015777859]": {
@@ -706,9 +701,363 @@
                 }
             }
         },
+        "Entity_[1197347961791]": {
+            "Id": "Entity_[1197347961791]",
+            "Name": "front_left_wheel",
+            "Components": {
+                "AZ::Render::EditorMeshComponent": {
+                    "$type": "AZ::Render::EditorMeshComponent",
+                    "Id": 17733856218721462550,
+                    "Controller": {
+                        "Configuration": {
+                            "ModelAsset": {
+                                "assetId": {
+                                    "guid": "{0C731B02-18BC-58ED-9DED-B22375D43B2B}",
+                                    "subId": 274477424
+                                },
+                                "assetHint": "materialeditor/viewportmodels/beveledcylinder.fbx.azmodel"
+                            }
+                        }
+                    }
+                },
+                "EditorColliderComponent": {
+                    "$type": "EditorColliderComponent",
+                    "Id": 8531506908252869833,
+                    "ColliderConfiguration": {
+                        "Position": [
+                            0.0,
+                            0.0,
+                            0.5
+                        ],
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Entire object"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "ShapeType": 3,
+                        "Box": {
+                            "Scale": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "Capsule": {
+                            "Scale": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "Height": 0.6000000238418579,
+                            "Radius": 0.5
+                        },
+                        "Cylinder": {
+                            "Configuration": {
+                                "Scale": [
+                                    0.5,
+                                    0.5,
+                                    0.5
+                                ],
+                                "CookedData": "TlhTAUNWWE0NAAAAAAAAAElDRQFDTEhMCQAAACAAAAAwAAAAEgAAAGAAAAAU70M+X4PsPgAAAAAuvbuyAAAAPwAAAAAuvbuyAAAAPwAAgD8U70M+X4PsPgAAgD/zBLU+8wS1PgAAgD/zBLU+8wS1PgAAAAAX70O+XoPsPgAAAAD0BLW+8gS1PgAAAAD0BLW+8gS1PgAAgD8X70O+XoPsPgAAgD8a70M+XoPsvgAAAAD1BLU+8QS1vgAAAAD1BLU+8QS1vgAAgD8a70M+XoPsvgAAgD/jzYwzAAAAvwAAgD/jzYwzAAAAvwAAAABgg+w+EO9DvgAAAAAAAAA/AAAAAAAAAAAAAAA/AAAAAAAAgD9gg+w+EO9DvgAAgD9eg+y+GO9DvgAAgD8AAAC/Lr07swAAgD8AAAC/Lr07swAAAABeg+y+GO9DvgAAAADyBLW+9AS1vgAAAADyBLW+9AS1vgAAgD9fg+y+E+9DPgAAAABfg+y+E+9DPgAAgD8R70O+X4PsvgAAgD8R70O+X4PsvgAAAABeg+w+Fu9DPgAAgD9eg+w+Fu9DPgAAAAAAAAAAAAAAAAAAgD8AAIC/AAAQAL3FRz6/FHs/AAAAAL8U+74QAAQO2zkOPzLbVD8AAAAAwBT7vhQABBjbOQ6/MNtUPwAAAAC+FPu+GAAECsbFR76/FHs/AAAAAL8U+74cAAQK3jkOPy/bVL8AAAAAvxT7viAABAfGxUc+vxR7vwAAAAC/FPu+JAAEAb8Uez+4xUe+AAAAAL8U+74oAAQVMttUP9k5Dr8AAAAAvhT7viwABAe9FHu/xsVHvgAAAAC/FPu+MAAEES/bVL/bOQ6/AAAAAL0U+740AAQEvxR7v7zFRz4AAAAAvxT7vjgABBAw21S/2TkOPwAAAAC8FPu+PAAEC9k5Dr8z21S/AAAAAL8U+75AAAQAvcVHvr8Ue78AAAAAvxT7vkQABAAy21Q/2jkOPwAAAAC/FPu+SAAEFL8Uez/GxUc+AAAAAL8U+75MAAQUAAAAAAAAAAAAAIC/AAAAgFAAEAIcDg0MExIeBAMCCQgbFRQZAAECAwADBAUGBwgJBgkCAQoLDA0KDQ4PEBESExATDAsUFRYXFBcYGRoWFRsaGwgHHBkYHRwdDw4fBQQeHx4SER8REAsKDx0YFxYaBwYBAAUADgAGAAUACAAHABAADwACAAEABAADAAwACwAJAAoADQERAQQBAgIPAhEDEQMMAwQEEQURBQgFBgYOBhEHEQcQBwgIEQkLCREJCgoRCg0LEQsMDBENEQ0ODhEPEQ8QEBEBAhEBBBEAAQQAAQIAAg8CDxEDBBEDDBEAAwwAAwQFBhEFCBEABQgABQYABg4GDhEHCBEHEBEABxAABwgACQoACQsJCxEJChEKDREACg0LDBEACwwADQ4NDhEADxAPEBEAAAAAAAAAvwAAAL8AAAAAAAAAPwAAAD8AAIA/Fe9DPy9+mj6ifSMwo0eMsaJ9IzAvfpo+zqL7MKNHjLHOovswX/a+PbPqLjKdY6SxAAAAPwAAgL+8FPs+vhzNPjH2kD4x9pA+",
+                                "Type": 1
+                            },
+                            "Radius": 0.5
+                        }
+                    }
+                },
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 9984716510968656684
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 8753131012996230719
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 6042901924403057123
+                },
+                "EditorHingeJointComponent": {
+                    "$type": "EditorHingeJointComponent",
+                    "Id": 6807023272250541760,
+                    "Configuration": {
+                        "Local Rotation": [
+                            0.0,
+                            90.0,
+                            0.0
+                        ],
+                        "Parent Entity": "Entity_[377009208255]",
+                        "Child Entity": "Entity_[1197347961791]"
+                    }
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 2409444303866605035
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 12077631393586675193
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 4081611179803028669
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 3808622864347405973
+                },
+                "EditorRigidBodyComponent": {
+                    "$type": "EditorRigidBodyComponent",
+                    "Id": 14359929139443163400,
+                    "Configuration": {
+                        "entityId": "",
+                        "Initial angular velocity": [
+                            0.0,
+                            0.0,
+                            0.25
+                        ],
+                        "Mass": 95.67086029052734,
+                        "Centre of mass offset": [
+                            5.090749155556296e-9,
+                            -2.392176456922357e-9,
+                            0.25
+                        ],
+                        "Inertia tensor": [
+                            3.4500699043273926,
+                            0.0,
+                            0.0,
+                            0.0,
+                            3.4500699043273926,
+                            0.0,
+                            0.0,
+                            0.0,
+                            2.9138550758361816
+                        ]
+                    }
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 6420611571028074909
+                },
+                "ROS2FrameEditorComponent": {
+                    "$type": "ROS2FrameEditorComponent",
+                    "Id": 5422394279144074518,
+                    "ROS2FrameConfiguration": {
+                        "Frame Name": "front_left_wheel"
+                    }
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 16851813295079043100,
+                    "Parent Entity": "Entity_[377009208255]",
+                    "Transform Data": {
+                        "Translate": [
+                            0.3570895195007324,
+                            -0.3260405957698822,
+                            -0.21894890069961548
+                        ],
+                        "Rotate": [
+                            89.99994659423828,
+                            0.0,
+                            0.0
+                        ],
+                        "UniformScale": 0.5
+                    }
+                },
+                "WheelControllerComponent": {
+                    "$type": "GenericComponentWrapper",
+                    "Id": 3306459369650244167,
+                    "m_template": {
+                        "$type": "WheelControllerComponent",
+                        "SteeringEntity": "Entity_[377009208255]"
+                    }
+                }
+            }
+        },
+        "Entity_[1442161097663]": {
+            "Id": "Entity_[1442161097663]",
+            "Name": "front_right_wheel",
+            "Components": {
+                "AZ::Render::EditorMeshComponent": {
+                    "$type": "AZ::Render::EditorMeshComponent",
+                    "Id": 17733856218721462550,
+                    "Controller": {
+                        "Configuration": {
+                            "ModelAsset": {
+                                "assetId": {
+                                    "guid": "{0C731B02-18BC-58ED-9DED-B22375D43B2B}",
+                                    "subId": 274477424
+                                },
+                                "assetHint": "materialeditor/viewportmodels/beveledcylinder.fbx.azmodel"
+                            }
+                        }
+                    }
+                },
+                "EditorColliderComponent": {
+                    "$type": "EditorColliderComponent",
+                    "Id": 8531506908252869833,
+                    "ColliderConfiguration": {
+                        "Position": [
+                            0.0,
+                            0.0,
+                            0.5
+                        ],
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Entire object"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "ShapeType": 3,
+                        "Box": {
+                            "Scale": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "Capsule": {
+                            "Scale": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "Height": 0.6000000238418579,
+                            "Radius": 0.5
+                        },
+                        "Cylinder": {
+                            "Configuration": {
+                                "Scale": [
+                                    0.5,
+                                    0.5,
+                                    0.5
+                                ],
+                                "CookedData": "TlhTAUNWWE0NAAAAAAAAAElDRQFDTEhMCQAAACAAAAAwAAAAEgAAAGAAAAAU70M+X4PsPgAAAAAuvbuyAAAAPwAAAAAuvbuyAAAAPwAAgD8U70M+X4PsPgAAgD/zBLU+8wS1PgAAgD/zBLU+8wS1PgAAAAAX70O+XoPsPgAAAAD0BLW+8gS1PgAAAAD0BLW+8gS1PgAAgD8X70O+XoPsPgAAgD8a70M+XoPsvgAAAAD1BLU+8QS1vgAAAAD1BLU+8QS1vgAAgD8a70M+XoPsvgAAgD/jzYwzAAAAvwAAgD/jzYwzAAAAvwAAAABgg+w+EO9DvgAAAAAAAAA/AAAAAAAAAAAAAAA/AAAAAAAAgD9gg+w+EO9DvgAAgD9eg+y+GO9DvgAAgD8AAAC/Lr07swAAgD8AAAC/Lr07swAAAABeg+y+GO9DvgAAAADyBLW+9AS1vgAAAADyBLW+9AS1vgAAgD9fg+y+E+9DPgAAAABfg+y+E+9DPgAAgD8R70O+X4PsvgAAgD8R70O+X4PsvgAAAABeg+w+Fu9DPgAAgD9eg+w+Fu9DPgAAAAAAAAAAAAAAAAAAgD8AAIC/AAAQAL3FRz6/FHs/AAAAAL8U+74QAAQO2zkOPzLbVD8AAAAAwBT7vhQABBjbOQ6/MNtUPwAAAAC+FPu+GAAECsbFR76/FHs/AAAAAL8U+74cAAQK3jkOPy/bVL8AAAAAvxT7viAABAfGxUc+vxR7vwAAAAC/FPu+JAAEAb8Uez+4xUe+AAAAAL8U+74oAAQVMttUP9k5Dr8AAAAAvhT7viwABAe9FHu/xsVHvgAAAAC/FPu+MAAEES/bVL/bOQ6/AAAAAL0U+740AAQEvxR7v7zFRz4AAAAAvxT7vjgABBAw21S/2TkOPwAAAAC8FPu+PAAEC9k5Dr8z21S/AAAAAL8U+75AAAQAvcVHvr8Ue78AAAAAvxT7vkQABAAy21Q/2jkOPwAAAAC/FPu+SAAEFL8Uez/GxUc+AAAAAL8U+75MAAQUAAAAAAAAAAAAAIC/AAAAgFAAEAIcDg0MExIeBAMCCQgbFRQZAAECAwADBAUGBwgJBgkCAQoLDA0KDQ4PEBESExATDAsUFRYXFBcYGRoWFRsaGwgHHBkYHRwdDw4fBQQeHx4SER8REAsKDx0YFxYaBwYBAAUADgAGAAUACAAHABAADwACAAEABAADAAwACwAJAAoADQERAQQBAgIPAhEDEQMMAwQEEQURBQgFBgYOBhEHEQcQBwgIEQkLCREJCgoRCg0LEQsMDBENEQ0ODhEPEQ8QEBEBAhEBBBEAAQQAAQIAAg8CDxEDBBEDDBEAAwwAAwQFBhEFCBEABQgABQYABg4GDhEHCBEHEBEABxAABwgACQoACQsJCxEJChEKDREACg0LDBEACwwADQ4NDhEADxAPEBEAAAAAAAAAvwAAAL8AAAAAAAAAPwAAAD8AAIA/Fe9DPy9+mj6ifSMwo0eMsaJ9IzAvfpo+zqL7MKNHjLHOovswX/a+PbPqLjKdY6SxAAAAPwAAgL+8FPs+vhzNPjH2kD4x9pA+",
+                                "Type": 1
+                            },
+                            "Radius": 0.5
+                        }
+                    }
+                },
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 9984716510968656684
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 8753131012996230719
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 6042901924403057123
+                },
+                "EditorHingeJointComponent": {
+                    "$type": "EditorHingeJointComponent",
+                    "Id": 6807023272250541760,
+                    "Configuration": {
+                        "Local Rotation": [
+                            0.0,
+                            -90.0,
+                            0.0
+                        ],
+                        "Parent Entity": "Entity_[377009208255]",
+                        "Child Entity": "Entity_[1442161097663]"
+                    }
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 2409444303866605035
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 12077631393586675193
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 4081611179803028669
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 3808622864347405973
+                },
+                "EditorRigidBodyComponent": {
+                    "$type": "EditorRigidBodyComponent",
+                    "Id": 14359929139443163400,
+                    "Configuration": {
+                        "entityId": "",
+                        "Initial angular velocity": [
+                            0.0,
+                            0.0,
+                            0.5
+                        ],
+                        "Mass": 95.67086029052734,
+                        "Centre of mass offset": [
+                            5.090749155556296e-9,
+                            -2.392176456922357e-9,
+                            0.25
+                        ],
+                        "Inertia tensor": [
+                            3.4500699043273926,
+                            0.0,
+                            0.0,
+                            0.0,
+                            3.4500699043273926,
+                            0.0,
+                            0.0,
+                            0.0,
+                            2.9138550758361816
+                        ]
+                    }
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 6420611571028074909
+                },
+                "ROS2FrameEditorComponent": {
+                    "$type": "ROS2FrameEditorComponent",
+                    "Id": 15417635870643454673,
+                    "ROS2FrameConfiguration": {
+                        "Frame Name": "front_right_wheel"
+                    }
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 16851813295079043100,
+                    "Parent Entity": "Entity_[377009208255]",
+                    "Transform Data": {
+                        "Translate": [
+                            0.3570895195007324,
+                            0.3308313190937042,
+                            -0.2189497947692871
+                        ],
+                        "Rotate": [
+                            -90.00000762939453,
+                            0.0,
+                            180.0
+                        ],
+                        "UniformScale": 0.5
+                    }
+                },
+                "WheelControllerComponent": {
+                    "$type": "GenericComponentWrapper",
+                    "Id": 8073110239462938132,
+                    "m_template": {
+                        "$type": "WheelControllerComponent",
+                        "SteeringEntity": "Entity_[377009208255]"
+                    }
+                }
+            }
+        },
         "Entity_[2136359141117]": {
             "Id": "Entity_[2136359141117]",
-            "Name": "Entity2",
+            "Name": "box",
             "Components": {
                 "EditorDisabledCompositionComponent": {
                     "$type": "EditorDisabledCompositionComponent",
@@ -1291,27 +1640,565 @@
                     "$type": "ROS2FrameEditorComponent",
                     "Id": 7737267001042596557,
                     "ROS2FrameConfiguration": {
-                        "Namespace Configuration": {
-                            "Namespace": "camera"
-                        },
                         "Frame Name": "camera_frame"
                     }
                 },
                 "TransformComponent": {
                     "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
                     "Id": 12683832409163246933,
-                    "Parent Entity": "Entity_[1176639161715]",
+                    "Parent Entity": "Entity_[377009208255]",
                     "Transform Data": {
                         "Translate": [
-                            5.805691719055176,
-                            -1.106866478919983,
-                            1.5176478624343872
+                            0.9001212120056152,
+                            0.0,
+                            0.4715234041213989
                         ],
                         "Rotate": [
-                            -90.0,
+                            -89.99999237060547,
                             -89.99994659423828,
                             0.0
                         ]
+                    }
+                }
+            }
+        },
+        "Entity_[377009208255]": {
+            "Id": "Entity_[377009208255]",
+            "Name": "robot",
+            "Components": {
+                "AZ::Render::EditorMeshComponent": {
+                    "$type": "AZ::Render::EditorMeshComponent",
+                    "Id": 2963756298006726456,
+                    "Controller": {
+                        "Configuration": {
+                            "ModelAsset": {
+                                "assetId": {
+                                    "guid": "{C15CD465-9589-56ED-945F-8416FA4798A3}",
+                                    "subId": 284301017
+                                },
+                                "assetHint": "objects/_primitives/_box_1x1.fbx.azmodel"
+                            }
+                        }
+                    }
+                },
+                "EditorColliderComponent": {
+                    "$type": "EditorColliderComponent",
+                    "Id": 3508945445965843768,
+                    "ColliderConfiguration": {
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Entire object"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "ShapeType": 1,
+                        "Box": {
+                            "Scale": [
+                                1.0,
+                                0.5,
+                                0.20000000298023224
+                            ]
+                        },
+                        "HasNonUniformScale": true
+                    },
+                    "HasNonUniformScale": true
+                },
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 1414217570296962431
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 2147979887438570804
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 11837027145941730880,
+                    "Child Entity Order": [
+                        "Entity_[1163754259827]",
+                        "Entity_[1101272022781]",
+                        "Entity_[2707589791485]",
+                        "Entity_[1197347961791]",
+                        "Entity_[4551717419967]",
+                        "Entity_[1442161097663]",
+                        "Entity_[4564602321855]"
+                    ]
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 2938845196004787652
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 6194872343975866759
+                },
+                "EditorMaterialComponent": {
+                    "$type": "EditorMaterialComponent",
+                    "Id": 734875209392199484,
+                    "Controller": {
+                        "Configuration": {
+                            "materials": [
+                                {
+                                    "Key": {
+                                        "materialSlotStableId": 2511422688
+                                    },
+                                    "Value": {
+                                        "MaterialAsset": {
+                                            "assetId": {
+                                                "guid": "{69FE164E-0656-5AEE-9CE7-B954A44A519F}"
+                                            },
+                                            "assetHint": "materials/whiteboxdefault.azmaterial"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "EditorNonUniformScaleComponent": {
+                    "$type": "EditorNonUniformScaleComponent",
+                    "Id": 10296583106810580840,
+                    "NonUniformScale": [
+                        1.0,
+                        0.5,
+                        0.20000000298023224
+                    ]
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 9558175430895094728
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 16126528987874979237
+                },
+                "EditorRigidBodyComponent": {
+                    "$type": "EditorRigidBodyComponent",
+                    "Id": 13226802867173541079,
+                    "Configuration": {
+                        "entityId": "",
+                        "Mass": 100.0,
+                        "Inertia tensor": [
+                            2.4166665077209473,
+                            0.0,
+                            0.0,
+                            0.0,
+                            8.666666030883789,
+                            0.0,
+                            0.0,
+                            0.0,
+                            10.416666030883789
+                        ]
+                    }
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 6807191909519767595
+                },
+                "ROS2FrameEditorComponent": {
+                    "$type": "ROS2FrameEditorComponent",
+                    "Id": 3271863864744931096,
+                    "ROS2FrameConfiguration": {
+                        "Namespace Configuration": {
+                            "Namespace": "robot"
+                        },
+                        "Frame Name": "robot"
+                    }
+                },
+                "SkidSteeringModelComponent": {
+                    "$type": "GenericComponentWrapper",
+                    "Id": 7533618837973443163,
+                    "m_template": {
+                        "$type": "SkidSteeringModelComponent",
+                        "VehicleConfiguration": {
+                            "AxlesConfigurations": [
+                                {
+                                    "AxleTag": "front",
+                                    "AxleWheels": [
+                                        "Entity_[1442161097663]",
+                                        "Entity_[1197347961791]"
+                                    ],
+                                    "IsSteering": true,
+                                    "IsDrive": true
+                                },
+                                {
+                                    "AxleTag": "back",
+                                    "AxleWheels": [
+                                        "Entity_[4551717419967]",
+                                        "Entity_[4564602321855]"
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 268326962631427322,
+                    "Parent Entity": "Entity_[1176639161715]",
+                    "Transform Data": {
+                        "Translate": [
+                            4.223000526428223,
+                            -0.007787615060806274,
+                            0.8184924125671387
+                        ]
+                    }
+                }
+            }
+        },
+        "Entity_[4551717419967]": {
+            "Id": "Entity_[4551717419967]",
+            "Name": "back_left_wheel",
+            "Components": {
+                "AZ::Render::EditorMeshComponent": {
+                    "$type": "AZ::Render::EditorMeshComponent",
+                    "Id": 17733856218721462550,
+                    "Controller": {
+                        "Configuration": {
+                            "ModelAsset": {
+                                "assetId": {
+                                    "guid": "{0C731B02-18BC-58ED-9DED-B22375D43B2B}",
+                                    "subId": 274477424
+                                },
+                                "assetHint": "materialeditor/viewportmodels/beveledcylinder.fbx.azmodel"
+                            }
+                        }
+                    }
+                },
+                "EditorColliderComponent": {
+                    "$type": "EditorColliderComponent",
+                    "Id": 8531506908252869833,
+                    "ColliderConfiguration": {
+                        "Position": [
+                            0.0,
+                            0.0,
+                            0.5
+                        ],
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Entire object"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "ShapeType": 3,
+                        "Box": {
+                            "Scale": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "Capsule": {
+                            "Scale": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "Height": 0.6000000238418579,
+                            "Radius": 0.5
+                        },
+                        "Cylinder": {
+                            "Configuration": {
+                                "Scale": [
+                                    0.5,
+                                    0.5,
+                                    0.5
+                                ],
+                                "CookedData": "TlhTAUNWWE0NAAAAAAAAAElDRQFDTEhMCQAAACAAAAAwAAAAEgAAAGAAAAAU70M+X4PsPgAAAAAuvbuyAAAAPwAAAAAuvbuyAAAAPwAAgD8U70M+X4PsPgAAgD/zBLU+8wS1PgAAgD/zBLU+8wS1PgAAAAAX70O+XoPsPgAAAAD0BLW+8gS1PgAAAAD0BLW+8gS1PgAAgD8X70O+XoPsPgAAgD8a70M+XoPsvgAAAAD1BLU+8QS1vgAAAAD1BLU+8QS1vgAAgD8a70M+XoPsvgAAgD/jzYwzAAAAvwAAgD/jzYwzAAAAvwAAAABgg+w+EO9DvgAAAAAAAAA/AAAAAAAAAAAAAAA/AAAAAAAAgD9gg+w+EO9DvgAAgD9eg+y+GO9DvgAAgD8AAAC/Lr07swAAgD8AAAC/Lr07swAAAABeg+y+GO9DvgAAAADyBLW+9AS1vgAAAADyBLW+9AS1vgAAgD9fg+y+E+9DPgAAAABfg+y+E+9DPgAAgD8R70O+X4PsvgAAgD8R70O+X4PsvgAAAABeg+w+Fu9DPgAAgD9eg+w+Fu9DPgAAAAAAAAAAAAAAAAAAgD8AAIC/AAAQAL3FRz6/FHs/AAAAAL8U+74QAAQO2zkOPzLbVD8AAAAAwBT7vhQABBjbOQ6/MNtUPwAAAAC+FPu+GAAECsbFR76/FHs/AAAAAL8U+74cAAQK3jkOPy/bVL8AAAAAvxT7viAABAfGxUc+vxR7vwAAAAC/FPu+JAAEAb8Uez+4xUe+AAAAAL8U+74oAAQVMttUP9k5Dr8AAAAAvhT7viwABAe9FHu/xsVHvgAAAAC/FPu+MAAEES/bVL/bOQ6/AAAAAL0U+740AAQEvxR7v7zFRz4AAAAAvxT7vjgABBAw21S/2TkOPwAAAAC8FPu+PAAEC9k5Dr8z21S/AAAAAL8U+75AAAQAvcVHvr8Ue78AAAAAvxT7vkQABAAy21Q/2jkOPwAAAAC/FPu+SAAEFL8Uez/GxUc+AAAAAL8U+75MAAQUAAAAAAAAAAAAAIC/AAAAgFAAEAIcDg0MExIeBAMCCQgbFRQZAAECAwADBAUGBwgJBgkCAQoLDA0KDQ4PEBESExATDAsUFRYXFBcYGRoWFRsaGwgHHBkYHRwdDw4fBQQeHx4SER8REAsKDx0YFxYaBwYBAAUADgAGAAUACAAHABAADwACAAEABAADAAwACwAJAAoADQERAQQBAgIPAhEDEQMMAwQEEQURBQgFBgYOBhEHEQcQBwgIEQkLCREJCgoRCg0LEQsMDBENEQ0ODhEPEQ8QEBEBAhEBBBEAAQQAAQIAAg8CDxEDBBEDDBEAAwwAAwQFBhEFCBEABQgABQYABg4GDhEHCBEHEBEABxAABwgACQoACQsJCxEJChEKDREACg0LDBEACwwADQ4NDhEADxAPEBEAAAAAAAAAvwAAAL8AAAAAAAAAPwAAAD8AAIA/Fe9DPy9+mj6ifSMwo0eMsaJ9IzAvfpo+zqL7MKNHjLHOovswX/a+PbPqLjKdY6SxAAAAPwAAgL+8FPs+vhzNPjH2kD4x9pA+",
+                                "Type": 1
+                            },
+                            "Radius": 0.5
+                        }
+                    }
+                },
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 9984716510968656684
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 8753131012996230719
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 6042901924403057123
+                },
+                "EditorHingeJointComponent": {
+                    "$type": "EditorHingeJointComponent",
+                    "Id": 6807023272250541760,
+                    "Configuration": {
+                        "Local Rotation": [
+                            0.0,
+                            90.0,
+                            0.0
+                        ],
+                        "Parent Entity": "Entity_[377009208255]",
+                        "Child Entity": "Entity_[4551717419967]"
+                    }
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 2409444303866605035
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 12077631393586675193
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 4081611179803028669
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 3808622864347405973
+                },
+                "EditorRigidBodyComponent": {
+                    "$type": "EditorRigidBodyComponent",
+                    "Id": 14359929139443163400,
+                    "Configuration": {
+                        "entityId": "",
+                        "Initial angular velocity": [
+                            0.0,
+                            0.0,
+                            0.25
+                        ],
+                        "Mass": 95.67086029052734,
+                        "Centre of mass offset": [
+                            5.090749155556296e-9,
+                            -2.392176456922357e-9,
+                            0.25
+                        ],
+                        "Inertia tensor": [
+                            3.4500699043273926,
+                            0.0,
+                            0.0,
+                            0.0,
+                            3.4500699043273926,
+                            0.0,
+                            0.0,
+                            0.0,
+                            2.9138550758361816
+                        ]
+                    }
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 6420611571028074909
+                },
+                "ROS2FrameEditorComponent": {
+                    "$type": "ROS2FrameEditorComponent",
+                    "Id": 5422394279144074518,
+                    "ROS2FrameConfiguration": {
+                        "Frame Name": "front_left_wheel"
+                    }
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 16851813295079043100,
+                    "Parent Entity": "Entity_[377009208255]",
+                    "Transform Data": {
+                        "Translate": [
+                            -0.5875048637390137,
+                            -0.3260405957698822,
+                            -0.21894890069961548
+                        ],
+                        "Rotate": [
+                            89.99994659423828,
+                            0.0,
+                            0.0
+                        ],
+                        "UniformScale": 0.5
+                    }
+                },
+                "WheelControllerComponent": {
+                    "$type": "GenericComponentWrapper",
+                    "Id": 3306459369650244167,
+                    "m_template": {
+                        "$type": "WheelControllerComponent",
+                        "SteeringEntity": "Entity_[377009208255]"
+                    }
+                }
+            }
+        },
+        "Entity_[4564602321855]": {
+            "Id": "Entity_[4564602321855]",
+            "Name": "back_right_wheel",
+            "Components": {
+                "AZ::Render::EditorMeshComponent": {
+                    "$type": "AZ::Render::EditorMeshComponent",
+                    "Id": 17733856218721462550,
+                    "Controller": {
+                        "Configuration": {
+                            "ModelAsset": {
+                                "assetId": {
+                                    "guid": "{0C731B02-18BC-58ED-9DED-B22375D43B2B}",
+                                    "subId": 274477424
+                                },
+                                "assetHint": "materialeditor/viewportmodels/beveledcylinder.fbx.azmodel"
+                            }
+                        }
+                    }
+                },
+                "EditorColliderComponent": {
+                    "$type": "EditorColliderComponent",
+                    "Id": 8531506908252869833,
+                    "ColliderConfiguration": {
+                        "Position": [
+                            0.0,
+                            0.0,
+                            0.5
+                        ],
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "Name": "Entire object"
+                                }
+                            ]
+                        }
+                    },
+                    "ShapeConfiguration": {
+                        "ShapeType": 3,
+                        "Box": {
+                            "Scale": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        "Capsule": {
+                            "Scale": [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            "Height": 0.6000000238418579,
+                            "Radius": 0.5
+                        },
+                        "Cylinder": {
+                            "Configuration": {
+                                "Scale": [
+                                    0.5,
+                                    0.5,
+                                    0.5
+                                ],
+                                "CookedData": "TlhTAUNWWE0NAAAAAAAAAElDRQFDTEhMCQAAACAAAAAwAAAAEgAAAGAAAAAU70M+X4PsPgAAAAAuvbuyAAAAPwAAAAAuvbuyAAAAPwAAgD8U70M+X4PsPgAAgD/zBLU+8wS1PgAAgD/zBLU+8wS1PgAAAAAX70O+XoPsPgAAAAD0BLW+8gS1PgAAAAD0BLW+8gS1PgAAgD8X70O+XoPsPgAAgD8a70M+XoPsvgAAAAD1BLU+8QS1vgAAAAD1BLU+8QS1vgAAgD8a70M+XoPsvgAAgD/jzYwzAAAAvwAAgD/jzYwzAAAAvwAAAABgg+w+EO9DvgAAAAAAAAA/AAAAAAAAAAAAAAA/AAAAAAAAgD9gg+w+EO9DvgAAgD9eg+y+GO9DvgAAgD8AAAC/Lr07swAAgD8AAAC/Lr07swAAAABeg+y+GO9DvgAAAADyBLW+9AS1vgAAAADyBLW+9AS1vgAAgD9fg+y+E+9DPgAAAABfg+y+E+9DPgAAgD8R70O+X4PsvgAAgD8R70O+X4PsvgAAAABeg+w+Fu9DPgAAgD9eg+w+Fu9DPgAAAAAAAAAAAAAAAAAAgD8AAIC/AAAQAL3FRz6/FHs/AAAAAL8U+74QAAQO2zkOPzLbVD8AAAAAwBT7vhQABBjbOQ6/MNtUPwAAAAC+FPu+GAAECsbFR76/FHs/AAAAAL8U+74cAAQK3jkOPy/bVL8AAAAAvxT7viAABAfGxUc+vxR7vwAAAAC/FPu+JAAEAb8Uez+4xUe+AAAAAL8U+74oAAQVMttUP9k5Dr8AAAAAvhT7viwABAe9FHu/xsVHvgAAAAC/FPu+MAAEES/bVL/bOQ6/AAAAAL0U+740AAQEvxR7v7zFRz4AAAAAvxT7vjgABBAw21S/2TkOPwAAAAC8FPu+PAAEC9k5Dr8z21S/AAAAAL8U+75AAAQAvcVHvr8Ue78AAAAAvxT7vkQABAAy21Q/2jkOPwAAAAC/FPu+SAAEFL8Uez/GxUc+AAAAAL8U+75MAAQUAAAAAAAAAAAAAIC/AAAAgFAAEAIcDg0MExIeBAMCCQgbFRQZAAECAwADBAUGBwgJBgkCAQoLDA0KDQ4PEBESExATDAsUFRYXFBcYGRoWFRsaGwgHHBkYHRwdDw4fBQQeHx4SER8REAsKDx0YFxYaBwYBAAUADgAGAAUACAAHABAADwACAAEABAADAAwACwAJAAoADQERAQQBAgIPAhEDEQMMAwQEEQURBQgFBgYOBhEHEQcQBwgIEQkLCREJCgoRCg0LEQsMDBENEQ0ODhEPEQ8QEBEBAhEBBBEAAQQAAQIAAg8CDxEDBBEDDBEAAwwAAwQFBhEFCBEABQgABQYABg4GDhEHCBEHEBEABxAABwgACQoACQsJCxEJChEKDREACg0LDBEACwwADQ4NDhEADxAPEBEAAAAAAAAAvwAAAL8AAAAAAAAAPwAAAD8AAIA/Fe9DPy9+mj6ifSMwo0eMsaJ9IzAvfpo+zqL7MKNHjLHOovswX/a+PbPqLjKdY6SxAAAAPwAAgL+8FPs+vhzNPjH2kD4x9pA+",
+                                "Type": 1
+                            },
+                            "Radius": 0.5
+                        }
+                    }
+                },
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 9984716510968656684
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 8753131012996230719
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 6042901924403057123
+                },
+                "EditorHingeJointComponent": {
+                    "$type": "EditorHingeJointComponent",
+                    "Id": 6807023272250541760,
+                    "Configuration": {
+                        "Local Rotation": [
+                            0.0,
+                            -90.0,
+                            0.0
+                        ],
+                        "Parent Entity": "Entity_[377009208255]",
+                        "Child Entity": "Entity_[4564602321855]"
+                    }
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 2409444303866605035
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 12077631393586675193
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 4081611179803028669
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 3808622864347405973
+                },
+                "EditorRigidBodyComponent": {
+                    "$type": "EditorRigidBodyComponent",
+                    "Id": 14359929139443163400,
+                    "Configuration": {
+                        "entityId": "",
+                        "Initial angular velocity": [
+                            0.0,
+                            0.0,
+                            0.5
+                        ],
+                        "Mass": 95.67086029052734,
+                        "Centre of mass offset": [
+                            5.090749155556296e-9,
+                            -2.392176456922357e-9,
+                            0.25
+                        ],
+                        "Inertia tensor": [
+                            3.4500699043273926,
+                            0.0,
+                            0.0,
+                            0.0,
+                            3.4500699043273926,
+                            0.0,
+                            0.0,
+                            0.0,
+                            2.9138550758361816
+                        ]
+                    }
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 6420611571028074909
+                },
+                "ROS2FrameEditorComponent": {
+                    "$type": "ROS2FrameEditorComponent",
+                    "Id": 15417635870643454673,
+                    "ROS2FrameConfiguration": {
+                        "Frame Name": "front_right_wheel"
+                    }
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 16851813295079043100,
+                    "Parent Entity": "Entity_[377009208255]",
+                    "Transform Data": {
+                        "Translate": [
+                            -0.6528820991516113,
+                            0.3308313190937042,
+                            -0.2189497947692871
+                        ],
+                        "Rotate": [
+                            -90.00000762939453,
+                            0.0,
+                            180.0
+                        ],
+                        "UniformScale": 0.5
+                    }
+                },
+                "WheelControllerComponent": {
+                    "$type": "GenericComponentWrapper",
+                    "Id": 8073110239462938132,
+                    "m_template": {
+                        "$type": "WheelControllerComponent",
+                        "SteeringEntity": "Entity_[377009208255]"
                     }
                 }
             }
