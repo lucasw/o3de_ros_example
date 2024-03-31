@@ -473,6 +473,11 @@
                     "Id": 6472623349872972660,
                     "Parent Entity": "Entity_[1176639161715]",
                     "Transform Data": {
+                        "Translate": [
+                            -2.400081157684326,
+                            0.0,
+                            0.004188935738056898
+                        ],
                         "Rotate": [
                             0.0,
                             0.10000000149011612,
@@ -703,7 +708,7 @@
         },
         "Entity_[1197347961791]": {
             "Id": "Entity_[1197347961791]",
-            "Name": "front_left_wheel",
+            "Name": "front_right_wheel",
             "Components": {
                 "AZ::Render::EditorMeshComponent": {
                     "$type": "AZ::Render::EditorMeshComponent",
@@ -732,7 +737,14 @@
                         "MaterialSlots": {
                             "Slots": [
                                 {
-                                    "Name": "Entire object"
+                                    "Name": "Entire object",
+                                    "MaterialAsset": {
+                                        "assetId": {
+                                            "guid": "{6591FAEC-8F36-534D-9197-7F4DE940F58A}",
+                                            "subId": 1
+                                        },
+                                        "assetHint": "materials/wheel_material.physicsmaterial"
+                                    }
                                 }
                             ]
                         }
@@ -787,11 +799,19 @@
                     "Configuration": {
                         "Local Rotation": [
                             0.0,
-                            90.0,
+                            -90.0,
                             0.0
                         ],
                         "Parent Entity": "Entity_[377009208255]",
                         "Child Entity": "Entity_[1197347961791]"
+                    },
+                    "Angular Limit": {
+                        "Standard Limit Configuration": {
+                            "Is Limited": false
+                        }
+                    },
+                    "Motor": {
+                        "UseMotor": true
                     }
                 },
                 "EditorInspectorComponent": {
@@ -820,22 +840,22 @@
                             0.0,
                             0.25
                         ],
-                        "Mass": 95.67086029052734,
+                        "Mass": 11.48050308227539,
                         "Centre of mass offset": [
                             5.090749155556296e-9,
                             -2.392176456922357e-9,
                             0.25
                         ],
                         "Inertia tensor": [
-                            3.4500699043273926,
+                            0.41400855779647827,
                             0.0,
                             0.0,
                             0.0,
-                            3.4500699043273926,
+                            0.41400855779647827,
                             0.0,
                             0.0,
                             0.0,
-                            2.9138550758361816
+                            0.3496626019477844
                         ]
                     }
                 },
@@ -847,7 +867,7 @@
                     "$type": "ROS2FrameEditorComponent",
                     "Id": 5422394279144074518,
                     "ROS2FrameConfiguration": {
-                        "Frame Name": "front_left_wheel"
+                        "Frame Name": "front_right_wheel"
                     }
                 },
                 "TransformComponent": {
@@ -873,14 +893,14 @@
                     "Id": 3306459369650244167,
                     "m_template": {
                         "$type": "WheelControllerComponent",
-                        "SteeringEntity": "Entity_[377009208255]"
+                        "SteeringEntity": ""
                     }
                 }
             }
         },
         "Entity_[1442161097663]": {
             "Id": "Entity_[1442161097663]",
-            "Name": "front_right_wheel",
+            "Name": "front_left_wheel",
             "Components": {
                 "AZ::Render::EditorMeshComponent": {
                     "$type": "AZ::Render::EditorMeshComponent",
@@ -909,7 +929,14 @@
                         "MaterialSlots": {
                             "Slots": [
                                 {
-                                    "Name": "Entire object"
+                                    "Name": "Entire object",
+                                    "MaterialAsset": {
+                                        "assetId": {
+                                            "guid": "{6591FAEC-8F36-534D-9197-7F4DE940F58A}",
+                                            "subId": 1
+                                        },
+                                        "assetHint": "materials/wheel_material.physicsmaterial"
+                                    }
                                 }
                             ]
                         }
@@ -969,6 +996,11 @@
                         ],
                         "Parent Entity": "Entity_[377009208255]",
                         "Child Entity": "Entity_[1442161097663]"
+                    },
+                    "Angular Limit": {
+                        "Standard Limit Configuration": {
+                            "Is Limited": false
+                        }
                     }
                 },
                 "EditorInspectorComponent": {
@@ -997,22 +1029,22 @@
                             0.0,
                             0.5
                         ],
-                        "Mass": 95.67086029052734,
+                        "Mass": 11.48050308227539,
                         "Centre of mass offset": [
                             5.090749155556296e-9,
                             -2.392176456922357e-9,
                             0.25
                         ],
                         "Inertia tensor": [
-                            3.4500699043273926,
+                            0.41400855779647827,
                             0.0,
                             0.0,
                             0.0,
-                            3.4500699043273926,
+                            0.41400855779647827,
                             0.0,
                             0.0,
                             0.0,
-                            2.9138550758361816
+                            0.3496626019477844
                         ]
                     }
                 },
@@ -1024,7 +1056,7 @@
                     "$type": "ROS2FrameEditorComponent",
                     "Id": 15417635870643454673,
                     "ROS2FrameConfiguration": {
-                        "Frame Name": "front_right_wheel"
+                        "Frame Name": "front_left_wheel"
                     }
                 },
                 "TransformComponent": {
@@ -1033,12 +1065,12 @@
                     "Parent Entity": "Entity_[377009208255]",
                     "Transform Data": {
                         "Translate": [
-                            0.3570895195007324,
-                            0.3308313190937042,
-                            -0.2189497947692871
+                            0.3570899963378906,
+                            0.33083125948905945,
+                            -0.21894991397857666
                         ],
                         "Rotate": [
-                            -90.00000762939453,
+                            -89.99998474121094,
                             0.0,
                             180.0
                         ],
@@ -1050,7 +1082,7 @@
                     "Id": 8073110239462938132,
                     "m_template": {
                         "$type": "WheelControllerComponent",
-                        "SteeringEntity": "Entity_[377009208255]"
+                        "SteeringEntity": ""
                     }
                 }
             }
@@ -1619,19 +1651,19 @@
                         "Publishers": {
                             "Color Camera Info": {
                                 "Type": "sensor_msgs::msg::CameraInfo",
-                                "Topic": "color_camera_info"
+                                "Topic": "color/camera_info"
                             },
                             "Color Image": {
                                 "Type": "sensor_msgs::msg::Image",
-                                "Topic": "camera_image_color"
+                                "Topic": "color/image_color"
                             },
                             "Depth Camera Info": {
                                 "Type": "sensor_msgs::msg::CameraInfo",
-                                "Topic": "depth_camera_info"
+                                "Topic": "depth/camera_info"
                             },
                             "Depth Image": {
                                 "Type": "sensor_msgs::msg::Image",
-                                "Topic": "camera_image_depth"
+                                "Topic": "depth/image"
                             }
                         }
                     }
@@ -1722,8 +1754,8 @@
                         "Entity_[1101272022781]",
                         "Entity_[2707589791485]",
                         "Entity_[1197347961791]",
-                        "Entity_[4551717419967]",
                         "Entity_[1442161097663]",
+                        "Entity_[4551717419967]",
                         "Entity_[4564602321855]"
                     ]
                 },
@@ -1796,7 +1828,15 @@
                 },
                 "EditorVisibilityComponent": {
                     "$type": "EditorVisibilityComponent",
-                    "Id": 6807191909519767595
+                    "Id": 6807191909519767595,
+                    "VisibilityFlag": false
+                },
+                "InputConfigurationComponent": {
+                    "$type": "GenericComponentWrapper",
+                    "Id": 8740534344771516118,
+                    "m_template": {
+                        "$type": "InputConfigurationComponent"
+                    }
                 },
                 "ROS2FrameEditorComponent": {
                     "$type": "ROS2FrameEditorComponent",
@@ -1844,9 +1884,11 @@
                                 {
                                     "AxleTag": "back",
                                     "AxleWheels": [
-                                        "Entity_[4551717419967]",
-                                        "Entity_[4564602321855]"
-                                    ]
+                                        "Entity_[4564602321855]",
+                                        "Entity_[4551717419967]"
+                                    ],
+                                    "IsSteering": true,
+                                    "IsDrive": true
                                 }
                             ]
                         }
@@ -1868,7 +1910,7 @@
         },
         "Entity_[4551717419967]": {
             "Id": "Entity_[4551717419967]",
-            "Name": "back_left_wheel",
+            "Name": "back_right_wheel",
             "Components": {
                 "AZ::Render::EditorMeshComponent": {
                     "$type": "AZ::Render::EditorMeshComponent",
@@ -1897,7 +1939,14 @@
                         "MaterialSlots": {
                             "Slots": [
                                 {
-                                    "Name": "Entire object"
+                                    "Name": "Entire object",
+                                    "MaterialAsset": {
+                                        "assetId": {
+                                            "guid": "{6591FAEC-8F36-534D-9197-7F4DE940F58A}",
+                                            "subId": 1
+                                        },
+                                        "assetHint": "materials/wheel_material.physicsmaterial"
+                                    }
                                 }
                             ]
                         }
@@ -1952,11 +2001,19 @@
                     "Configuration": {
                         "Local Rotation": [
                             0.0,
-                            90.0,
+                            -90.0,
                             0.0
                         ],
                         "Parent Entity": "Entity_[377009208255]",
                         "Child Entity": "Entity_[4551717419967]"
+                    },
+                    "Angular Limit": {
+                        "Standard Limit Configuration": {
+                            "Is Limited": false
+                        }
+                    },
+                    "Motor": {
+                        "UseMotor": true
                     }
                 },
                 "EditorInspectorComponent": {
@@ -1985,22 +2042,22 @@
                             0.0,
                             0.25
                         ],
-                        "Mass": 95.67086029052734,
+                        "Mass": 11.48050308227539,
                         "Centre of mass offset": [
                             5.090749155556296e-9,
                             -2.392176456922357e-9,
                             0.25
                         ],
                         "Inertia tensor": [
-                            3.4500699043273926,
+                            0.41400855779647827,
                             0.0,
                             0.0,
                             0.0,
-                            3.4500699043273926,
+                            0.41400855779647827,
                             0.0,
                             0.0,
                             0.0,
-                            2.9138550758361816
+                            0.3496626019477844
                         ]
                     }
                 },
@@ -2012,7 +2069,7 @@
                     "$type": "ROS2FrameEditorComponent",
                     "Id": 5422394279144074518,
                     "ROS2FrameConfiguration": {
-                        "Frame Name": "front_left_wheel"
+                        "Frame Name": "back_right_wheel"
                     }
                 },
                 "TransformComponent": {
@@ -2038,14 +2095,14 @@
                     "Id": 3306459369650244167,
                     "m_template": {
                         "$type": "WheelControllerComponent",
-                        "SteeringEntity": "Entity_[377009208255]"
+                        "SteeringEntity": ""
                     }
                 }
             }
         },
         "Entity_[4564602321855]": {
             "Id": "Entity_[4564602321855]",
-            "Name": "back_right_wheel",
+            "Name": "back_left_wheel",
             "Components": {
                 "AZ::Render::EditorMeshComponent": {
                     "$type": "AZ::Render::EditorMeshComponent",
@@ -2074,7 +2131,14 @@
                         "MaterialSlots": {
                             "Slots": [
                                 {
-                                    "Name": "Entire object"
+                                    "Name": "Entire object",
+                                    "MaterialAsset": {
+                                        "assetId": {
+                                            "guid": "{6591FAEC-8F36-534D-9197-7F4DE940F58A}",
+                                            "subId": 1
+                                        },
+                                        "assetHint": "materials/wheel_material.physicsmaterial"
+                                    }
                                 }
                             ]
                         }
@@ -2134,6 +2198,11 @@
                         ],
                         "Parent Entity": "Entity_[377009208255]",
                         "Child Entity": "Entity_[4564602321855]"
+                    },
+                    "Angular Limit": {
+                        "Standard Limit Configuration": {
+                            "Is Limited": false
+                        }
                     }
                 },
                 "EditorInspectorComponent": {
@@ -2162,22 +2231,22 @@
                             0.0,
                             0.5
                         ],
-                        "Mass": 95.67086029052734,
+                        "Mass": 11.48050308227539,
                         "Centre of mass offset": [
                             5.090749155556296e-9,
                             -2.392176456922357e-9,
                             0.25
                         ],
                         "Inertia tensor": [
-                            3.4500699043273926,
+                            0.41400855779647827,
                             0.0,
                             0.0,
                             0.0,
-                            3.4500699043273926,
+                            0.41400855779647827,
                             0.0,
                             0.0,
                             0.0,
-                            2.9138550758361816
+                            0.3496626019477844
                         ]
                     }
                 },
@@ -2189,7 +2258,7 @@
                     "$type": "ROS2FrameEditorComponent",
                     "Id": 15417635870643454673,
                     "ROS2FrameConfiguration": {
-                        "Frame Name": "front_right_wheel"
+                        "Frame Name": "back_left_wheel"
                     }
                 },
                 "TransformComponent": {
@@ -2215,7 +2284,7 @@
                     "Id": 8073110239462938132,
                     "m_template": {
                         "$type": "WheelControllerComponent",
-                        "SteeringEntity": "Entity_[377009208255]"
+                        "SteeringEntity": ""
                     }
                 }
             }
