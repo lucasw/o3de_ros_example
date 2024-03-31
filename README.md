@@ -10,12 +10,13 @@ https://github.com/lucasw/ros_from_src/issues/41
 
 ## Building
 
-First time:
+First time cmake setup:
+
 ```
 cmake -B build/linux -S . -G "Ninja Multi-Config"
 ```
 
-Later builds:
+builds:
 
 ```
 source ~/ros/ros2_rolling/install/setup.bash
@@ -26,3 +27,9 @@ cmake --build build/linux --target o3de_ros_project.GameLauncher Editor --config
 This will take a long time the first time, and go really quickly later.
 
 Changing the scene through the editor doesn't require running the build again, only adding a new Gem does, or changing any of the cpp files- I think.
+
+Run the project:
+
+```
+./build/linux/bin/profile/o3de_ros_project.GameLauncher
+```
