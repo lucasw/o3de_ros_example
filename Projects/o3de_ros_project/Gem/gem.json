@@ -1,0 +1,29 @@
+{
+    "gem_name": "o3de_ros_project",
+    "version": "1.0.0",
+    "display_name": "o3de_ros_project",
+    "license": "What license o3de_ros_project uses goes here: i.e. Apache-2.0 or MIT",
+    "license_url": "Link to the license web site goes here: i.e. https://opensource.org/licenses/Apache-2.0 Or https://opensource.org/licenses/MIT",
+    "origin": "The name of the originator goes here. i.e. XYZ Inc.",
+    "origin_url": "The primary repo for o3de_ros_project goes here: i.e. http://www.mydomain.com",
+    "type": "",
+    "summary": "A short description of o3de_ros_project.",
+    "canonical_tags": [
+        "Gem"
+    ],
+    "user_tags": [
+        "o3de_ros_project"
+    ],
+    "platforms": [
+        "${Platforms}"
+    ],
+    "icon_path": "preview.png",
+    "requirements": "",
+    "documentation_url": "",
+    "dependencies": [
+    ],
+    "compatible_engines": [
+    ],
+    "engine_api_dependencies":[
+    ]
+}

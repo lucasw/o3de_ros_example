@@ -1,0 +1,48 @@
+{
+    "project_name": "o3de_ros_project",
+    "version": "1.0.0",
+    "project_id": "{A4A74750-18CF-4629-8F92-32FFCC0C72D1}",
+    "origin": "https://github.com/lucasw/o3de_ros_example",
+    "license": "BSD-3 https://github.com/lucasw/o3de_ros_example/blob/main/LICENSE",
+    "display_name": "o3de_ros_project",
+    "summary": "Simple O3DE ros example",
+    "canonical_tags": [
+        "Project"
+    ],
+    "user_tags": [
+        "o3de_ros_project"
+    ],
+    "icon_path": "preview.png",
+    "engine": "o3de",
+    "external_subdirectories": [
+        "Gem"
+    ],
+    "restricted": "o3de_ros_project",
+    "gem_names": [
+        "Atom",
+        "AudioSystem",
+        "CameraFramework",
+        "DebugDraw",
+        "DiffuseProbeGrid",
+        "EMotionFX",
+        "EditorPythonBindings",
+        "GameState",
+        "ImGui",
+        "LandscapeCanvas",
+        "LyShine",
+        "MiniAudio",
+        "PhysX",
+        "PrefabBuilder",
+        "PrimitiveAssets",
+        "ROS2",
+        "RemoteTools",
+        "SaveData",
+        "ScriptCanvasPhysics",
+        "ScriptEvents",
+        "StartingPointInput",
+        "TextureAtlas",
+        "WhiteBox",
+        "o3de_ros_project"
+    ],
+    "engine_version": "4.2.0"
+}
