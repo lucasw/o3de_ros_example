@@ -1808,6 +1808,23 @@
                         "Frame Name": "robot"
                     }
                 },
+                "ROS2RobotControlComponent": {
+                    "$type": "GenericComponentWrapper",
+                    "Id": 554256041434990105,
+                    "m_template": {
+                        "$type": "ROS2RobotControlComponent",
+                        "SubscriberConfiguration": {
+                            "Topic": "cmd_vel"
+                        }
+                    }
+                },
+                "SkidSteeringControlComponent": {
+                    "$type": "GenericComponentWrapper",
+                    "Id": 8780895921280749538,
+                    "m_template": {
+                        "$type": "SkidSteeringControlComponent"
+                    }
+                },
                 "SkidSteeringModelComponent": {
                     "$type": "GenericComponentWrapper",
                     "Id": 7533618837973443163,

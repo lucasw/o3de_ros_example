@@ -28,8 +28,17 @@ This will take a long time the first time, and go really quickly later.
 
 Changing the scene through the editor doesn't require running the build again, only adding a new Gem does, or changing any of the cpp files- I think.
 
+
+## Running
+
 Run the project:
 
 ```
 ./build/linux/bin/profile/o3de_ros_project.GameLauncher
+```
+
+### Control
+
+```
+ros2 topic pub --qos-durability volatile --qos-reliability best_effort /robot/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.1}, angular: {z: 1.1}}"
 ```
