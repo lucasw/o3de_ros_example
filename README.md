@@ -42,3 +42,7 @@ Run the project:
 ```
 ros2 topic pub --qos-durability volatile --qos-reliability best_effort /robot/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 1.1}, angular: {z: 1.1}}"
 ```
+
+```
+ros2 topic pub --qos-durability volatile --qos-reliability best_effort /car/acker ackermann_msgs/msg/AckermannDrive "{steering_angle: 1.0, speed: 2.0}"
+```

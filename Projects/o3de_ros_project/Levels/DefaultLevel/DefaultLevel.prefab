@@ -901,6 +901,71 @@
                 }
             }
         },
+        "Entity_[14346760314591]": {
+            "Id": "Entity_[14346760314591]",
+            "Name": "flip",
+            "Components": {
+                "AZ::Render::EditorMeshComponent": {
+                    "$type": "AZ::Render::EditorMeshComponent",
+                    "Id": 8524406894492748588,
+                    "Controller": {
+                        "Configuration": {
+                            "ModelAsset": {
+                                "assetId": {
+                                    "guid": "{0C731B02-18BC-58ED-9DED-B22375D43B2B}",
+                                    "subId": 274477424
+                                },
+                                "assetHint": "materialeditor/viewportmodels/beveledcylinder.fbx.azmodel"
+                            }
+                        }
+                    }
+                },
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 10943462109182500982
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 8892054358142730108
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 5202559573184370812
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 13078170598853782094
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 15713530974858427988
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 880288147436988042
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 7065261152310111876
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 826820264556747804
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 8657899584322165881,
+                    "Parent Entity": "Entity_[398448031008]",
+                    "Transform Data": {
+                        "Rotate": [
+                            180.0,
+                            0.0,
+                            0.0
+                        ]
+                    }
+                }
+            }
+        },
         "Entity_[1442161097663]": {
             "Id": "Entity_[1442161097663]",
             "Name": "front_left_wheel",
@@ -1953,13 +2018,16 @@
                             -90.0,
                             0.0
                         ],
-                        "Parent Entity": "Entity_[875189400864]",
+                        "Parent Entity": "Entity_[5267199450847]",
                         "Child Entity": "Entity_[372678227232]"
                     },
                     "Angular Limit": {
                         "Standard Limit Configuration": {
                             "Is Limited": false
                         }
+                    },
+                    "Motor": {
+                        "UseMotor": true
                     }
                 },
                 "EditorInspectorComponent": {
@@ -2021,27 +2089,22 @@
                 "TransformComponent": {
                     "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
                     "Id": 16851813295079043100,
-                    "Parent Entity": "Entity_[875189400864]",
+                    "Parent Entity": "Entity_[5267199450847]",
                     "Transform Data": {
-                        "Translate": [
-                            0.0,
-                            0.3999999761581421,
-                            0.0
-                        ],
                         "Rotate": [
-                            -89.99996185302734,
+                            -90.0,
                             0.0,
-                            180.0
+                            0.0
                         ],
                         "UniformScale": 0.5
                     }
                 },
                 "WheelControllerComponent": {
                     "$type": "GenericComponentWrapper",
-                    "Id": 8073110239462938132,
+                    "Id": 725010618642410974,
                     "m_template": {
                         "$type": "WheelControllerComponent",
-                        "SteeringEntity": ""
+                        "SteeringEntity": "Entity_[5267199450847]"
                     }
                 }
             }
@@ -2050,21 +2113,6 @@
             "Id": "Entity_[376973194528]",
             "Name": "front_right_wheel",
             "Components": {
-                "AZ::Render::EditorMeshComponent": {
-                    "$type": "AZ::Render::EditorMeshComponent",
-                    "Id": 17733856218721462550,
-                    "Controller": {
-                        "Configuration": {
-                            "ModelAsset": {
-                                "assetId": {
-                                    "guid": "{0C731B02-18BC-58ED-9DED-B22375D43B2B}",
-                                    "subId": 274477424
-                                },
-                                "assetHint": "materialeditor/viewportmodels/beveledcylinder.fbx.azmodel"
-                            }
-                        }
-                    }
-                },
                 "EditorColliderComponent": {
                     "$type": "EditorColliderComponent",
                     "Id": 8531506908252869833,
@@ -2072,7 +2120,7 @@
                         "Position": [
                             0.0,
                             0.0,
-                            0.5
+                            -0.5
                         ],
                         "MaterialSlots": {
                             "Slots": [
@@ -2114,7 +2162,7 @@
                                     0.5,
                                     0.5
                                 ],
-                                "CookedData": "TlhTAUNWWE0NAAAAAAAAAElDRQFDTEhMCQAAACAAAAAwAAAAEgAAAGAAAAAU70M+X4PsPgAAAAAuvbuyAAAAPwAAAAAuvbuyAAAAPwAAgD8U70M+X4PsPgAAgD/zBLU+8wS1PgAAgD/zBLU+8wS1PgAAAAAX70O+XoPsPgAAAAD0BLW+8gS1PgAAAAD0BLW+8gS1PgAAgD8X70O+XoPsPgAAgD8a70M+XoPsvgAAAAD1BLU+8QS1vgAAAAD1BLU+8QS1vgAAgD8a70M+XoPsvgAAgD/jzYwzAAAAvwAAgD/jzYwzAAAAvwAAAABgg+w+EO9DvgAAAAAAAAA/AAAAAAAAAAAAAAA/AAAAAAAAgD9gg+w+EO9DvgAAgD9eg+y+GO9DvgAAgD8AAAC/Lr07swAAgD8AAAC/Lr07swAAAABeg+y+GO9DvgAAAADyBLW+9AS1vgAAAADyBLW+9AS1vgAAgD9fg+y+E+9DPgAAAABfg+y+E+9DPgAAgD8R70O+X4PsvgAAgD8R70O+X4PsvgAAAABeg+w+Fu9DPgAAgD9eg+w+Fu9DPgAAAAAAAAAAAAAAAAAAgD8AAIC/AAAQAL3FRz6/FHs/AAAAAL8U+74QAAQO2zkOPzLbVD8AAAAAwBT7vhQABBjbOQ6/MNtUPwAAAAC+FPu+GAAECsbFR76/FHs/AAAAAL8U+74cAAQK3jkOPy/bVL8AAAAAvxT7viAABAfGxUc+vxR7vwAAAAC/FPu+JAAEAb8Uez+4xUe+AAAAAL8U+74oAAQVMttUP9k5Dr8AAAAAvhT7viwABAe9FHu/xsVHvgAAAAC/FPu+MAAEES/bVL/bOQ6/AAAAAL0U+740AAQEvxR7v7zFRz4AAAAAvxT7vjgABBAw21S/2TkOPwAAAAC8FPu+PAAEC9k5Dr8z21S/AAAAAL8U+75AAAQAvcVHvr8Ue78AAAAAvxT7vkQABAAy21Q/2jkOPwAAAAC/FPu+SAAEFL8Uez/GxUc+AAAAAL8U+75MAAQUAAAAAAAAAAAAAIC/AAAAgFAAEAIcDg0MExIeBAMCCQgbFRQZAAECAwADBAUGBwgJBgkCAQoLDA0KDQ4PEBESExATDAsUFRYXFBcYGRoWFRsaGwgHHBkYHRwdDw4fBQQeHx4SER8REAsKDx0YFxYaBwYBAAUADgAGAAUACAAHABAADwACAAEABAADAAwACwAJAAoADQERAQQBAgIPAhEDEQMMAwQEEQURBQgFBgYOBhEHEQcQBwgIEQkLCREJCgoRCg0LEQsMDBENEQ0ODhEPEQ8QEBEBAhEBBBEAAQQAAQIAAg8CDxEDBBEDDBEAAwwAAwQFBhEFCBEABQgABQYABg4GDhEHCBEHEBEABxAABwgACQoACQsJCxEJChEKDREACg0LDBEACwwADQ4NDhEADxAPEBEAAAAAAAAAvwAAAL8AAAAAAAAAPwAAAD8AAIA/Fe9DPy9+mj6ifSMwo0eMsaJ9IzAvfpo+zqL7MKNHjLHOovswX/a+PbPqLjKdY6SxAAAAPwAAgL+8FPs+vhzNPjH2kD4x9pA+",
+                                "CookedData": "TlhTAUNWWE0NAAAAAAAAAElDRQFDTEhMCQAAACAAAAAwAAAAEgAAAGAAAABeg+w+Fu9DPgAAAADzBLU+8wS1PgAAAAAU70M+X4PsPgAAAAAuvbuyAAAAPwAAAAAX70O+XoPsPgAAAAD0BLW+8gS1PgAAAABfg+y+E+9DPgAAAAAAAAC/Lr07swAAAABeg+y+GO9DvgAAAADyBLW+9AS1vgAAAAAR70O+X4PsvgAAAADjzYwzAAAAvwAAAAAa70M+XoPsvgAAAAD1BLU+8QS1vgAAAABgg+w+EO9DvgAAAAAAAAA/AAAAAAAAAABgg+w+EO9DvgAAgL8AAAA/AAAAAAAAgL/1BLU+8QS1vgAAgL8U70M+X4PsPgAAgL8uvbuyAAAAPwAAgL/zBLU+8wS1PgAAgL8X70O+XoPsPgAAgL/0BLW+8gS1PgAAgL8a70M+XoPsvgAAgL/jzYwzAAAAvwAAgL9eg+y+GO9DvgAAgL/yBLW+9AS1vgAAgL8AAAC/Lr07swAAgL9fg+y+E+9DPgAAgL8R70O+X4PsvgAAgL9eg+w+Fu9DPgAAgL8AAAAAAAAAAAAAgD8AAACAAAAQEL8Uez+4xUe+AAAAAL8U+74QAAQHMttUP9k5Dr8AAAAAvhT7vhQABAW9xUc+vxR7PwAAAAC/FPu+GAAECts5Dj8y21Q/AAAAAMAU+74cAAQJ2zkOvzDbVD8AAAAAvhT7viAABAzGxUe+vxR7PwAAAAC/FPu+JAAEDN45Dj8v21S/AAAAAL8U+74oAAQFxsVHPr8Ue78AAAAAvxT7viwABAMv21S/2zkOvwAAAAC9FPu+MAAEAb0Ue7/GxUe+AAAAAL4U+740AAQAvxR7v7zFRz4AAAAAvxT7vjgABA4w21S/2TkOPwAAAAC8FPu+PAAEDb3FR76/FHu/AAAAAL8U+75AAAQC2TkOvzPbVL8AAAAAvhT7vkQABAEy21Q/2jkOPwAAAAC/FPu+SAAECL8Uez/GxUc+AAAAAL8U+75MAAQHAAAAAAAAAAAAAIC/AACAv1AAEAAAAQIDBAUGBwgJCgsMDQ4PEBEPDhAODRITFAMCEwIBFRYXBQQWBAMUGBINDBgMCxkaGwkIGggHHB0cBwYdBgUXHhkLCh4KCRsfFQEAHwAPER8REBIYGR4bGhwdFxYUExUADwAEAAMABgAFAAwACwAKAAkADgANAAgABwACAAEAEAERARABAgIHAhEDEQMGAwQEDwQRBREFDAUGBhEHEQcICA0IEQkRCQ4JCgoLChELEQsMDBENEQ0ODhEPEQ8QEBEADxAABA8AAwQAAwYABQYABQwACwwACgsACQoACQ4ADQ4ACA0ABwgAAgcAAQIAARABAhEBEBECBxEDBBEDBhEEDxEFBhEFDBEHCBEIDREJChEJDhEKCxELDBENDhEPEBEAAAAAAAAAvwAAAL8AAIC/AAAAPwAAAD8AAAAAFe9DPy9+mj6kfSMwQDaeMaR9IzAvfpo+XyaQsUA2njFfJpCxX/a+Pb22TjJFVzyyAAAAvwAAgL+9FPs+vRzNPjH2kD4x9pA+",
                                 "Type": 1
                             },
                             "Radius": 0.5
@@ -2131,7 +2179,10 @@
                 },
                 "EditorEntitySortComponent": {
                     "$type": "EditorEntitySortComponent",
-                    "Id": 6042901924403057123
+                    "Id": 6042901924403057123,
+                    "Child Entity Order": [
+                        "Entity_[958195403805]"
+                    ]
                 },
                 "EditorHingeJointComponent": {
                     "$type": "EditorHingeJointComponent",
@@ -2142,7 +2193,7 @@
                             -90.0,
                             0.0
                         ],
-                        "Parent Entity": "Entity_[875189400864]",
+                        "Parent Entity": "Entity_[5271494418143]",
                         "Child Entity": "Entity_[376973194528]"
                     },
                     "Angular Limit": {
@@ -2175,16 +2226,11 @@
                     "Id": 14359929139443163400,
                     "Configuration": {
                         "entityId": "",
-                        "Initial angular velocity": [
-                            0.0,
-                            0.0,
-                            0.25
-                        ],
                         "Mass": 11.48050308227539,
                         "Centre of mass offset": [
-                            5.090749155556296e-9,
-                            -2.392176456922357e-9,
-                            0.25
+                            6.0161644555023486e-9,
+                            -5.4814415229031965e-9,
+                            -0.25
                         ],
                         "Inertia tensor": [
                             0.41400855779647827,
@@ -2213,15 +2259,10 @@
                 "TransformComponent": {
                     "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
                     "Id": 16851813295079043100,
-                    "Parent Entity": "Entity_[875189400864]",
+                    "Parent Entity": "Entity_[5271494418143]",
                     "Transform Data": {
-                        "Translate": [
-                            0.0,
-                            -0.4000000059604645,
-                            0.0
-                        ],
                         "Rotate": [
-                            89.99994659423828,
+                            -90.0,
                             0.0,
                             0.0
                         ],
@@ -2230,10 +2271,10 @@
                 },
                 "WheelControllerComponent": {
                     "$type": "GenericComponentWrapper",
-                    "Id": 3306459369650244167,
+                    "Id": 10854449020314838698,
                     "m_template": {
                         "$type": "WheelControllerComponent",
-                        "SteeringEntity": ""
+                        "SteeringEntity": "Entity_[5271494418143]"
                     }
                 }
             }
@@ -2641,6 +2682,10 @@
                         "Standard Limit Configuration": {
                             "Is Limited": false
                         }
+                    },
+                    "Motor": {
+                        "UseMotor": true,
+                        "ForceLimit": 5.0
                     }
                 },
                 "EditorInspectorComponent": {
@@ -2705,14 +2750,14 @@
                     "Parent Entity": "Entity_[426771308255]",
                     "Transform Data": {
                         "Translate": [
-                            -0.2118232250213623,
-                            0.33083128929138184,
-                            -0.018949806690216064
+                            0.0,
+                            0.4000000059604645,
+                            0.0
                         ],
                         "Rotate": [
-                            -90.00000762939453,
+                            -90.0,
                             0.0,
-                            180.0
+                            0.0
                         ],
                         "UniformScale": 0.5
                     }
@@ -2890,29 +2935,14 @@
             "Id": "Entity_[398448031008]",
             "Name": "back_right_wheel",
             "Components": {
-                "AZ::Render::EditorMeshComponent": {
-                    "$type": "AZ::Render::EditorMeshComponent",
-                    "Id": 17733856218721462550,
-                    "Controller": {
-                        "Configuration": {
-                            "ModelAsset": {
-                                "assetId": {
-                                    "guid": "{0C731B02-18BC-58ED-9DED-B22375D43B2B}",
-                                    "subId": 274477424
-                                },
-                                "assetHint": "materialeditor/viewportmodels/beveledcylinder.fbx.azmodel"
-                            }
-                        }
-                    }
-                },
                 "EditorColliderComponent": {
                     "$type": "EditorColliderComponent",
-                    "Id": 8531506908252869833,
+                    "Id": 14135640005037295289,
                     "ColliderConfiguration": {
                         "Position": [
                             0.0,
                             0.0,
-                            0.5
+                            -0.5
                         ],
                         "MaterialSlots": {
                             "Slots": [
@@ -2954,7 +2984,7 @@
                                     0.5,
                                     0.5
                                 ],
-                                "CookedData": "TlhTAUNWWE0NAAAAAAAAAElDRQFDTEhMCQAAACAAAAAwAAAAEgAAAGAAAAAU70M+X4PsPgAAAAAuvbuyAAAAPwAAAAAuvbuyAAAAPwAAgD8U70M+X4PsPgAAgD/zBLU+8wS1PgAAgD/zBLU+8wS1PgAAAAAX70O+XoPsPgAAAAD0BLW+8gS1PgAAAAD0BLW+8gS1PgAAgD8X70O+XoPsPgAAgD8a70M+XoPsvgAAAAD1BLU+8QS1vgAAAAD1BLU+8QS1vgAAgD8a70M+XoPsvgAAgD/jzYwzAAAAvwAAgD/jzYwzAAAAvwAAAABgg+w+EO9DvgAAAAAAAAA/AAAAAAAAAAAAAAA/AAAAAAAAgD9gg+w+EO9DvgAAgD9eg+y+GO9DvgAAgD8AAAC/Lr07swAAgD8AAAC/Lr07swAAAABeg+y+GO9DvgAAAADyBLW+9AS1vgAAAADyBLW+9AS1vgAAgD9fg+y+E+9DPgAAAABfg+y+E+9DPgAAgD8R70O+X4PsvgAAgD8R70O+X4PsvgAAAABeg+w+Fu9DPgAAgD9eg+w+Fu9DPgAAAAAAAAAAAAAAAAAAgD8AAIC/AAAQAL3FRz6/FHs/AAAAAL8U+74QAAQO2zkOPzLbVD8AAAAAwBT7vhQABBjbOQ6/MNtUPwAAAAC+FPu+GAAECsbFR76/FHs/AAAAAL8U+74cAAQK3jkOPy/bVL8AAAAAvxT7viAABAfGxUc+vxR7vwAAAAC/FPu+JAAEAb8Uez+4xUe+AAAAAL8U+74oAAQVMttUP9k5Dr8AAAAAvhT7viwABAe9FHu/xsVHvgAAAAC/FPu+MAAEES/bVL/bOQ6/AAAAAL0U+740AAQEvxR7v7zFRz4AAAAAvxT7vjgABBAw21S/2TkOPwAAAAC8FPu+PAAEC9k5Dr8z21S/AAAAAL8U+75AAAQAvcVHvr8Ue78AAAAAvxT7vkQABAAy21Q/2jkOPwAAAAC/FPu+SAAEFL8Uez/GxUc+AAAAAL8U+75MAAQUAAAAAAAAAAAAAIC/AAAAgFAAEAIcDg0MExIeBAMCCQgbFRQZAAECAwADBAUGBwgJBgkCAQoLDA0KDQ4PEBESExATDAsUFRYXFBcYGRoWFRsaGwgHHBkYHRwdDw4fBQQeHx4SER8REAsKDx0YFxYaBwYBAAUADgAGAAUACAAHABAADwACAAEABAADAAwACwAJAAoADQERAQQBAgIPAhEDEQMMAwQEEQURBQgFBgYOBhEHEQcQBwgIEQkLCREJCgoRCg0LEQsMDBENEQ0ODhEPEQ8QEBEBAhEBBBEAAQQAAQIAAg8CDxEDBBEDDBEAAwwAAwQFBhEFCBEABQgABQYABg4GDhEHCBEHEBEABxAABwgACQoACQsJCxEJChEKDREACg0LDBEACwwADQ4NDhEADxAPEBEAAAAAAAAAvwAAAL8AAAAAAAAAPwAAAD8AAIA/Fe9DPy9+mj6ifSMwo0eMsaJ9IzAvfpo+zqL7MKNHjLHOovswX/a+PbPqLjKdY6SxAAAAPwAAgL+8FPs+vhzNPjH2kD4x9pA+",
+                                "CookedData": "TlhTAUNWWE0NAAAAAAAAAElDRQFDTEhMCQAAACAAAAAwAAAAEgAAAGAAAABeg+w+Fu9DPgAAAADzBLU+8wS1PgAAAAAU70M+X4PsPgAAAAAuvbuyAAAAPwAAAAAX70O+XoPsPgAAAAD0BLW+8gS1PgAAAABfg+y+E+9DPgAAAAAAAAC/Lr07swAAAABeg+y+GO9DvgAAAADyBLW+9AS1vgAAAAAR70O+X4PsvgAAAADjzYwzAAAAvwAAAAAa70M+XoPsvgAAAAD1BLU+8QS1vgAAAABgg+w+EO9DvgAAAAAAAAA/AAAAAAAAAABgg+w+EO9DvgAAgL8AAAA/AAAAAAAAgL/1BLU+8QS1vgAAgL8U70M+X4PsPgAAgL8uvbuyAAAAPwAAgL/zBLU+8wS1PgAAgL8X70O+XoPsPgAAgL/0BLW+8gS1PgAAgL8a70M+XoPsvgAAgL/jzYwzAAAAvwAAgL9eg+y+GO9DvgAAgL/yBLW+9AS1vgAAgL8AAAC/Lr07swAAgL9fg+y+E+9DPgAAgL8R70O+X4PsvgAAgL9eg+w+Fu9DPgAAgL8AAAAAAAAAAAAAgD8AAACAAAAQEL8Uez+4xUe+AAAAAL8U+74QAAQHMttUP9k5Dr8AAAAAvhT7vhQABAW9xUc+vxR7PwAAAAC/FPu+GAAECts5Dj8y21Q/AAAAAMAU+74cAAQJ2zkOvzDbVD8AAAAAvhT7viAABAzGxUe+vxR7PwAAAAC/FPu+JAAEDN45Dj8v21S/AAAAAL8U+74oAAQFxsVHPr8Ue78AAAAAvxT7viwABAMv21S/2zkOvwAAAAC9FPu+MAAEAb0Ue7/GxUe+AAAAAL4U+740AAQAvxR7v7zFRz4AAAAAvxT7vjgABA4w21S/2TkOPwAAAAC8FPu+PAAEDb3FR76/FHu/AAAAAL8U+75AAAQC2TkOvzPbVL8AAAAAvhT7vkQABAEy21Q/2jkOPwAAAAC/FPu+SAAECL8Uez/GxUc+AAAAAL8U+75MAAQHAAAAAAAAAAAAAIC/AACAv1AAEAAAAQIDBAUGBwgJCgsMDQ4PEBEPDhAODRITFAMCEwIBFRYXBQQWBAMUGBINDBgMCxkaGwkIGggHHB0cBwYdBgUXHhkLCh4KCRsfFQEAHwAPER8REBIYGR4bGhwdFxYUExUADwAEAAMABgAFAAwACwAKAAkADgANAAgABwACAAEAEAERARABAgIHAhEDEQMGAwQEDwQRBREFDAUGBhEHEQcICA0IEQkRCQ4JCgoLChELEQsMDBENEQ0ODhEPEQ8QEBEADxAABA8AAwQAAwYABQYABQwACwwACgsACQoACQ4ADQ4ACA0ABwgAAgcAAQIAARABAhEBEBECBxEDBBEDBhEEDxEFBhEFDBEHCBEIDREJChEJDhEKCxELDBENDhEPEBEAAAAAAAAAvwAAAL8AAIC/AAAAPwAAAD8AAAAAFe9DPy9+mj6kfSMwQDaeMaR9IzAvfpo+XyaQsUA2njFfJpCxX/a+Pb22TjJFVzyyAAAAvwAAgL+9FPs+vRzNPjH2kD4x9pA+",
                                 "Type": 1
                             },
                             "Radius": 0.5
@@ -2971,7 +3001,10 @@
                 },
                 "EditorEntitySortComponent": {
                     "$type": "EditorEntitySortComponent",
-                    "Id": 6042901924403057123
+                    "Id": 6042901924403057123,
+                    "Child Entity Order": [
+                        "Entity_[14346760314591]"
+                    ]
                 },
                 "EditorHingeJointComponent": {
                     "$type": "EditorHingeJointComponent",
@@ -2991,7 +3024,8 @@
                         }
                     },
                     "Motor": {
-                        "UseMotor": true
+                        "UseMotor": true,
+                        "ForceLimit": 5.0
                     }
                 },
                 "EditorInspectorComponent": {
@@ -3056,12 +3090,12 @@
                     "Parent Entity": "Entity_[426771308255]",
                     "Transform Data": {
                         "Translate": [
-                            -0.14644598960876465,
-                            -0.32604050636291504,
-                            -0.018948912620544434
+                            0.0,
+                            -0.4000000059604645,
+                            0.0
                         ],
                         "Rotate": [
-                            89.99994659423828,
+                            -90.0,
                             0.0,
                             0.0
                         ],
@@ -3108,7 +3142,33 @@
                     "$type": "GenericComponentWrapper",
                     "Id": 2875401731261439064,
                     "m_template": {
-                        "$type": "AckermannVehicleModelComponent"
+                        "$type": "AckermannVehicleModelComponent",
+                        "VehicleConfiguration": {
+                            "AxlesConfigurations": [
+                                {
+                                    "AxleTag": "back_drive",
+                                    "AxleWheels": [
+                                        "Entity_[385563129120]",
+                                        "Entity_[398448031008]"
+                                    ],
+                                    "IsDrive": true
+                                },
+                                {
+                                    "AxleTag": "front_steer",
+                                    "AxleWheels": [
+                                        "Entity_[372678227232]",
+                                        "Entity_[376973194528]"
+                                    ],
+                                    "IsSteering": true,
+                                    "IsDrive": true
+                                }
+                            ]
+                        },
+                        "DriveModel": {
+                            "SteeringPID": {
+                                "I": 0.1
+                            }
+                        }
                     }
                 },
                 "EditorColliderComponent": {
@@ -3248,8 +3308,11 @@
                     "Id": 554256041434990105,
                     "m_template": {
                         "$type": "ROS2RobotControlComponent",
+                        "ControlConfiguration": {
+                            "Steering": 1
+                        },
                         "SubscriberConfiguration": {
-                            "Topic": "cmd_vel"
+                            "Topic": "acker"
                         }
                     }
                 },
@@ -3886,6 +3949,158 @@
                 }
             }
         },
+        "Entity_[5267199450847]": {
+            "Id": "Entity_[5267199450847]",
+            "Name": "front_left_steer",
+            "Components": {
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 4018605819583396056
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 4996969063768590218
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 12853834945757914676,
+                    "Child Entity Order": [
+                        "Entity_[372678227232]"
+                    ]
+                },
+                "EditorHingeJointComponent": {
+                    "$type": "EditorHingeJointComponent",
+                    "Id": 831187732486516926,
+                    "Configuration": {
+                        "Local Rotation": [
+                            0.0,
+                            90.0,
+                            0.0
+                        ],
+                        "Parent Entity": "Entity_[875189400864]",
+                        "Child Entity": "Entity_[5267199450847]"
+                    },
+                    "Motor": {
+                        "UseMotor": true
+                    }
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 8840998007419204001
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 9780130575528425270
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 6902922416873905252
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 8520729426925780467
+                },
+                "EditorRigidBodyComponent": {
+                    "$type": "EditorRigidBodyComponent",
+                    "Id": 9393694350995499433,
+                    "Configuration": {
+                        "entityId": ""
+                    }
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 1145212265921737633
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 7674932322109723936,
+                    "Parent Entity": "Entity_[875189400864]",
+                    "Transform Data": {
+                        "Translate": [
+                            0.0,
+                            0.5,
+                            0.0
+                        ]
+                    }
+                }
+            }
+        },
+        "Entity_[5271494418143]": {
+            "Id": "Entity_[5271494418143]",
+            "Name": "front_right_steer",
+            "Components": {
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 15545436819441933672
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 17082709672983771934
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 15466558137050796740,
+                    "Child Entity Order": [
+                        "Entity_[376973194528]"
+                    ]
+                },
+                "EditorHingeJointComponent": {
+                    "$type": "EditorHingeJointComponent",
+                    "Id": 762874014835654761,
+                    "Configuration": {
+                        "Local Rotation": [
+                            0.0,
+                            90.0,
+                            0.0
+                        ],
+                        "Parent Entity": "Entity_[875189400864]",
+                        "Child Entity": "Entity_[5271494418143]"
+                    },
+                    "Motor": {
+                        "UseMotor": true
+                    }
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 6269344005521018877
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 10207504358991347254
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 1209613411341715510
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 10423443233790708426
+                },
+                "EditorRigidBodyComponent": {
+                    "$type": "EditorRigidBodyComponent",
+                    "Id": 4281803630314672112,
+                    "Configuration": {
+                        "entityId": ""
+                    }
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 6241927610243369476
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 17427869021284508185,
+                    "Parent Entity": "Entity_[875189400864]",
+                    "Transform Data": {
+                        "Translate": [
+                            0.0,
+                            -0.5,
+                            0.0
+                        ]
+                    }
+                }
+            }
+        },
         "Entity_[875189400864]": {
             "Id": "Entity_[875189400864]",
             "Name": "front_axle",
@@ -3902,9 +4117,9 @@
                     "$type": "EditorEntitySortComponent",
                     "Id": 6330472151653882148,
                     "Child Entity Order": [
-                        "Entity_[372678227232]",
-                        "Entity_[376973194528]",
-                        "Entity_[2691960567072]"
+                        "Entity_[2691960567072]",
+                        "Entity_[5267199450847]",
+                        "Entity_[5271494418143]"
                     ]
                 },
                 "EditorHingeJointComponent": {
@@ -3957,6 +4172,71 @@
                     "Transform Data": {
                         "Translate": [
                             0.5410587787628174,
+                            0.0,
+                            0.0
+                        ]
+                    }
+                }
+            }
+        },
+        "Entity_[958195403805]": {
+            "Id": "Entity_[958195403805]",
+            "Name": "flip",
+            "Components": {
+                "AZ::Render::EditorMeshComponent": {
+                    "$type": "AZ::Render::EditorMeshComponent",
+                    "Id": 16579678521929192148,
+                    "Controller": {
+                        "Configuration": {
+                            "ModelAsset": {
+                                "assetId": {
+                                    "guid": "{0C731B02-18BC-58ED-9DED-B22375D43B2B}",
+                                    "subId": 274477424
+                                },
+                                "assetHint": "materialeditor/viewportmodels/beveledcylinder.fbx.azmodel"
+                            }
+                        }
+                    }
+                },
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 8540111072628576644
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 15158577831237493628
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 7469630559164855164
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 9318515521710221148
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 447794191007447613
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 11146970457126386603
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 11710913653642230166
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 7545713594923269242
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 9572303906478688106,
+                    "Parent Entity": "Entity_[376973194528]",
+                    "Transform Data": {
+                        "Rotate": [
+                            180.0,
                             0.0,
                             0.0
                         ]
