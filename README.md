@@ -31,6 +31,12 @@ Changing the scene through the editor doesn't require running the build again, o
 
 ## Running
 
+Run the editor to make changes:
+
+```
+./build/linux/bin/profile/Editor
+```
+
 Run the project:
 
 ```
