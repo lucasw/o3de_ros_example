@@ -40,6 +40,7 @@
         "ScriptCanvasPhysics",
         "ScriptEvents",
         "StartingPointInput",
+        "Terrain",
         "TextureAtlas",
         "WhiteBox",
         "o3de_ros_project"

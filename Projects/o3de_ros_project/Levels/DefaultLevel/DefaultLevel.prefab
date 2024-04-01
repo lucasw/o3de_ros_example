@@ -47,6 +47,14 @@
                 "$type": "EditorVisibilityComponent",
                 "Id": 9562516168917670048
             },
+            "EditorTerrainWorldComponent": {
+                "$type": "EditorTerrainWorldComponent",
+                "Id": 14030980770494807803
+            },
+            "EditorTerrainWorldRendererComponent": {
+                "$type": "EditorTerrainWorldRendererComponent",
+                "Id": 7048502188915558649
+            },
             "LocalViewBookmarkComponent": {
                 "$type": "LocalViewBookmarkComponent",
                 "Id": 15646370697722364603,
@@ -228,7 +236,14 @@
                 "Component_[16578565737331764849]": {
                     "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
                     "Id": 16578565737331764849,
-                    "Parent Entity": "Entity_[1176639161715]"
+                    "Parent Entity": "Entity_[1176639161715]",
+                    "Transform Data": {
+                        "Translate": [
+                            0.0,
+                            0.0,
+                            -0.44800758361816406
+                        ]
+                    }
                 },
                 "Component_[16919232076966545697]": {
                     "$type": "EditorInspectorComponent",
@@ -606,7 +621,8 @@
                         "Entity_[1159459292531]",
                         "Entity_[2136359141117]",
                         "Entity_[377009208255]",
-                        "Entity_[402742998304]"
+                        "Entity_[402742998304]",
+                        "Entity_[388517737209]"
                     ]
                 },
                 "Component_[9277695270015777859]": {
@@ -2486,7 +2502,7 @@
                         "Translate": [
                             4.223000526428223,
                             -0.007787615060806274,
-                            0.8184924125671387
+                            1.7687805891036987
                         ]
                     }
                 }
@@ -2772,6 +2788,122 @@
                 }
             }
         },
+        "Entity_[388517737209]": {
+            "Id": "Entity_[388517737209]",
+            "Name": "terrain",
+            "Components": {
+                "EditorAxisAlignedBoxShapeComponent": {
+                    "$type": "EditorAxisAlignedBoxShapeComponent",
+                    "Id": 13418546128169960360,
+                    "AxisAlignedBoxShape": {
+                        "Configuration": {
+                            "Dimensions": [
+                                30.0,
+                                30.0,
+                                5.0
+                            ]
+                        }
+                    }
+                },
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 1028480603933908073
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 4248095883163628607
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 12626959323320121712,
+                    "Child Entity Order": [
+                        "Entity_[392812704505]"
+                    ]
+                },
+                "EditorHeightfieldColliderComponent": {
+                    "$type": "EditorHeightfieldColliderComponent",
+                    "Id": 11006836432294783382,
+                    "ColliderConfiguration": {
+                        "Position": [
+                            -0.3575019836425781,
+                            0.12072741985321045,
+                            0.0
+                        ],
+                        "MaterialSlots": {
+                            "Slots": [
+                                {
+                                    "MaterialAsset": {
+                                        "assetId": {
+                                            "guid": "{6591FAEC-8F36-534D-9197-7F4DE940F58A}",
+                                            "subId": 1
+                                        },
+                                        "assetHint": "materials/wheel_material.physicsmaterial"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 13357343460328720378
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 4803383396873300202
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 9012962056315319675
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 13994678718700315914
+                },
+                "EditorTerrainHeightGradientListComponent": {
+                    "$type": "EditorTerrainHeightGradientListComponent",
+                    "Id": 3941398106278750307,
+                    "Configuration": {
+                        "GradientEntities": [
+                            "Entity_[392812704505]"
+                        ]
+                    }
+                },
+                "EditorTerrainLayerSpawnerComponent": {
+                    "$type": "EditorTerrainLayerSpawnerComponent",
+                    "Id": 16500780280126676378
+                },
+                "EditorTerrainPhysicsColliderComponent": {
+                    "$type": "EditorTerrainPhysicsColliderComponent",
+                    "Id": 10774567937921415176,
+                    "Configuration": {
+                        "DefaultMaterialAsset": {
+                            "assetId": {
+                                "guid": "{6591FAEC-8F36-534D-9197-7F4DE940F58A}",
+                                "subId": 1
+                            },
+                            "assetHint": "materials/wheel_material.physicsmaterial"
+                        }
+                    }
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 8541241616081689008
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 7348731673302859495,
+                    "Parent Entity": "Entity_[1176639161715]",
+                    "Transform Data": {
+                        "Translate": [
+                            8.837688446044922,
+                            0.0,
+                            -0.7484176158905029
+                        ]
+                    }
+                }
+            }
+        },
         "Entity_[389858096416]": {
             "Id": "Entity_[389858096416]",
             "Name": "lidar",
@@ -2860,6 +2992,75 @@
                 }
             }
         },
+        "Entity_[392812704505]": {
+            "Id": "Entity_[392812704505]",
+            "Name": "gradient",
+            "Components": {
+                "EditorAxisAlignedBoxShapeComponent": {
+                    "$type": "EditorAxisAlignedBoxShapeComponent",
+                    "Id": 16702999078379277659
+                },
+                "EditorDisabledCompositionComponent": {
+                    "$type": "EditorDisabledCompositionComponent",
+                    "Id": 17637990104757921615
+                },
+                "EditorEntityIconComponent": {
+                    "$type": "EditorEntityIconComponent",
+                    "Id": 18345689065225661697
+                },
+                "EditorEntitySortComponent": {
+                    "$type": "EditorEntitySortComponent",
+                    "Id": 2453096511140842421
+                },
+                "EditorGradientTransformComponent": {
+                    "$type": "EditorGradientTransformComponent",
+                    "Id": 9547854180487981001,
+                    "Configuration": {
+                        "ShapeReference": "",
+                        "Translate": [
+                            8.857501983642578,
+                            0.37927258014678955,
+                            -0.7484176158905029
+                        ]
+                    }
+                },
+                "EditorInspectorComponent": {
+                    "$type": "EditorInspectorComponent",
+                    "Id": 6225262733879393698
+                },
+                "EditorLockComponent": {
+                    "$type": "EditorLockComponent",
+                    "Id": 13266852316064913914
+                },
+                "EditorOnlyEntityComponent": {
+                    "$type": "EditorOnlyEntityComponent",
+                    "Id": 12643861895173167761
+                },
+                "EditorPendingCompositionComponent": {
+                    "$type": "EditorPendingCompositionComponent",
+                    "Id": 11688885296914674730
+                },
+                "EditorPerlinGradientComponent": {
+                    "$type": "EditorPerlinGradientComponent",
+                    "Id": 9131458560176931243,
+                    "Configuration": {
+                        "frequency": 0.11622170358896255
+                    },
+                    "Previewer": {
+                        "BoundsEntity": ""
+                    }
+                },
+                "EditorVisibilityComponent": {
+                    "$type": "EditorVisibilityComponent",
+                    "Id": 406788241282514451
+                },
+                "TransformComponent": {
+                    "$type": "{27F1E1A1-8D9D-4C3B-BD3A-AFB9762449C0} TransformComponent",
+                    "Id": 2478856503229854978,
+                    "Parent Entity": "Entity_[388517737209]"
+                }
+            }
+        },
         "Entity_[394153063712]": {
             "Id": "Entity_[394153063712]",
             "Name": "GameCamera",
@@ -2891,14 +3092,14 @@
                     "Parent Entity": "Entity_[402742998304]",
                     "Transform Data": {
                         "Translate": [
-                            1.9795629978179932,
-                            0.0,
-                            0.7763338088989258
+                            -1.6108595132827759,
+                            0.00000286102294921875,
+                            1.406226634979248
                         ],
                         "Rotate": [
-                            0.0000018171336932937265,
-                            -20.0,
-                            89.99995422363281
+                            9.085668466468633e-7,
+                            20.0,
+                            -90.00000762939453
                         ]
                     }
                 },
