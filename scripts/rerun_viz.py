@@ -21,10 +21,15 @@ from rclpy.qos import (
     QoSProfile,
     QoSReliabilityPolicy,
 )
-from rclpy.time import Time
+from rclpy.time import (
+    Duration,
+    Time,
+)
 from sensor_msgs.msg import (
     CameraInfo,
+    Image,
 )
+from tf2_ros import TransformException
 from tf2_ros.buffer import Buffer
 from tf2_ros.transform_listener import TransformListener
 
@@ -34,8 +39,8 @@ class O3DERosProjectSubscriber(Node):
         super().__init__("o3de_ros_project_subscriber")
 
         qos_profile = QoSProfile(
-            reliability=QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT,
-            history=QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
+            reliability=QoSReliabilityPolicy.BEST_EFFORT,
+            history=QoSHistoryPolicy.KEEP_LAST,
             depth=1
         )
 
@@ -50,6 +55,8 @@ class O3DERosProjectSubscriber(Node):
         self.model = PinholeCameraModel()
         self.cv_bridge = cv_bridge.CvBridge()
 
+        self.parent_frame = "car/car"
+
         # Log a bounding box as a visual placeholder for the map
         rr.log(
             "map/box",
@@ -60,11 +67,36 @@ class O3DERosProjectSubscriber(Node):
         # Subscriptions
         self.info_sub = self.create_subscription(
             CameraInfo,
-            "/robot/color/camera_info",
+            "/car/color/camera_info",
             self.cam_info_callback,
             qos_profile=qos_profile,
             callback_group=self.callback_group,
         )
+
+        self.img_sub = self.create_subscription(
+            Image,
+            "/car/color/image_color",
+            self.image_callback,
+            qos_profile=qos_profile,
+            callback_group=self.callback_group,
+        )
+
+    def log_tf_as_transform3d(self, child_frame: str, time: Time) -> None:
+        """
+        Helper to look up a transform with tf and log using `log_transform3d`.
+
+        Note: we do the lookup on the client side instead of re-logging the raw transforms until
+        Rerun has support for Derived Transforms [#1533](https://github.com/rerun-io/rerun/issues/1533)
+        """
+
+        # Do the TF lookup to get transform from child (source) -> parent (target)
+        try:
+            tf = self.tf_buffer.lookup_transform(self.parent_frame, child_frame, time, timeout=Duration(seconds=0.1))
+            t = tf.transform.translation
+            q = tf.transform.rotation
+            rr.log(child_frame, rr.Transform3D(translation=[t.x, t.y, t.z], rotation=rr.Quaternion(xyzw=[q.x, q.y, q.z, q.w])))
+        except TransformException as ex:
+            print(f"Failed to get transform: {ex}")
 
     def cam_info_callback(self, info: CameraInfo) -> None:
         """Log a `CameraInfo` with `log_pinhole`."""
@@ -80,6 +112,14 @@ class O3DERosProjectSubscriber(Node):
                 image_from_camera=self.model.intrinsicMatrix(),
             ),
         )
+
+    def image_callback(self, img: Image) -> None:
+        """Log an `Image` with `log_image` using `cv_bridge`."""
+        time = Time.from_msg(img.header.stamp)
+        rr.set_time_nanos("ros_time", time.nanoseconds)
+
+        rr.log(img.header.frame_id, rr.Image(self.cv_bridge.imgmsg_to_cv2(img)))
+        self.log_tf_as_transform3d(img.header.frame_id, time)
 
 
 def main():
